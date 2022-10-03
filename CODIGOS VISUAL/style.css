@@ -1,28 +1,93 @@
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-
+    padding: 0px 0px 0px 30px;
 }
 
 body {
-    background-image: url("img/fundoSite.jpg");
+    background-image: url("img/BG.jpg");
     background-size: cover;
-
-}
-
-.separacao {
-    border: solid 1px red;
-    display: inline-block;
-    height: 60em;
-    align-items: center;
-
-
+    font-family:'Bebas Neue', cursive;
 }
 
 #logo {
-    width: 20em;
-    justify-content: center;
-   
-    
+    width: 30em;
+    margin-top: 320px;
+    margin-left: 90px; 
 }
+
+.grid {
+    display: grid; 
+ 
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+    gap: 0px;
+    height: 100%;
+ 
+ }
+   
+ #lateral-esq {
+ 
+    background-color: white;
+    opacity: calc(75%); 
+    height: 900px;
+    align-self: center;
+    grid-row-start: 1;
+    grid-column-start: 1;
+ 
+    grid-row-end: 5;
+    grid-column-end: 3;
+    
+ }
+ #menu {
+    background-color: red;
+    opacity: calc(75%);
+
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+ 
+    grid-row-end: 2;
+    grid-column-end: 6;
+    
+ }
+
+
+.botoes {
+    font-size: 100px;
+    line-height: 1.5;
+    width: 15%;
+    
+    height: 100px;
+    
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+
+ }
+
+ #container {
+ 
+    background-color: greenyellow;
+    opacity: calc(75%);
+
+    grid-row-start: 2;
+    grid-column-start: 3;
+ 
+    grid-row-end: 4;
+    grid-column-end: 6;
+    
+ }
+ #footer {
+
+    color: white;
+    text-align:center;
+    margin-top: 150px;
+
+    grid-row-start: 4;
+    grid-column-start: 3;
+ 
+    grid-row-end: 5;
+    grid-column-end: 6;
+    
+ }
