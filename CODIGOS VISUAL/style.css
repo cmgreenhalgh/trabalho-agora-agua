@@ -1,7 +1,6 @@
 * {
     margin: 0;
-    padding: 0px 0px 0px 30px;
-}
+} 
 
 body {
     background-image: url("img/BG.jpg");
@@ -11,35 +10,30 @@ body {
 
 #logo {
     width: 30em;
-    margin-top: 320px;
-    margin-left: 90px; 
+    margin-top: 20em;
 }
 
 .grid {
-    display: grid; 
- 
+    display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
     gap: 0px;
     height: 100%;
- 
- }
+}
    
- #lateral-esq {
- 
+#lateral-esq {
+    margin-left: auto;
+    padding: 2em;
     background-color: white;
-    opacity: calc(75%); 
-    height: 900px;
+    opacity: calc(80%); 
+    height: 46em;
     align-self: center;
     grid-row-start: 1;
     grid-column-start: 1;
- 
     grid-row-end: 5;
-    grid-column-end: 3;
-    
- }
- #menu {
+    grid-column-end: 3;   
+}
+#menu {
     background-color: red;
     opacity: calc(75%);
 
@@ -47,9 +41,8 @@ body {
     grid-column-start: 3;
  
     grid-row-end: 2;
-    grid-column-end: 6;
-    
- }
+    grid-column-end: 6;   
+}
 
 
 .botoes {
@@ -60,31 +53,62 @@ body {
     display:flex;
     align-items: center;
     justify-content: space-around;
+}
 
- }
-
- #container {
- 
+#container {
     background-color: greenyellow;
     opacity: calc(75%);
-
     grid-row-start: 2;
     grid-column-start: 3;
- 
     grid-row-end: 4;
     grid-column-end: 6;
-    
- }
- #footer {
+    padding: 5em;   
+}
 
+#pesquisa-cep{
+    border-radius: 1.5em;
+    align-self: center;
+    padding: 2em;
+    background-color: white;
+    opacity: calc(80%);
+    height: calc(70%);
+}
+
+#texto-pesquisa{
+    font-family:'Bebas Neue', cursive;
+    font-size: 2.5em;
+}
+
+#caixa-pesquisa{
+    opacity: calc(100%);
+    text-align:center;
+    border-radius: 1.5em;
+    width: 70%;
+    height: 3em;
+    text-decoration:solid;
+    color: white;
+    background-color: #9ab8c7;
+}
+
+#botao-pesquisa{
+    opacity: calc(100%);
+    border-radius: 1.5em;
+    padding: 0.5em;
+    background-color: #9ab8c7;
+}
+
+#img-botao-pesquisa{
+    width: 3em;
+    
+
+}
+
+#footer {
     color: white;
     text-align:center;
     margin-top: 150px;
-
     grid-row-start: 4;
     grid-column-start: 3;
- 
     grid-row-end: 5;
-    grid-column-end: 6;
-    
- }
+    grid-column-end: 6;   
+}
