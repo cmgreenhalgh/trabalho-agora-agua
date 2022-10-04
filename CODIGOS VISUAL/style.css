@@ -1,52 +1,86 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --low-opacity-bg: #96bec4af;
 } 
 
 body {
     background-image: url("img/BG.jpg");
     background-size: cover;
     font-family:'Bebas Neue', cursive;
+    height: 100vh;
+    
 }
-
-#logo {
-    width: 30em;
-    margin-top: 20em;
-}
-
-.grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px;
+main {
+    display: flex;
+    flex-direction: row;
     height: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+#logo {
+    width: 24em;
+    
+}
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 90%;
+    justify-content: space-between;
 }
    
-#lateral-esq {
-    margin-left: auto;
-    padding: 2em;
+#aside{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+#aside-logo{
     background-color: white;
-    opacity: calc(80%); 
-    height: 46em;
-    align-self: center;
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: 5;
-    grid-column-end: 3;   
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    opacity: 0.88;   
+}
+#aside-logo a{
+    object-fit: contain;
 }
 #menu {
-    background-color: red;
-    opacity: calc(75%);
+    
+    padding: 10px;
+    background-color: var(--low-opacity-bg);
+    border-radius: 14px ;
+    margin-top: 4rem;
+}
+#menu .nav-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-    grid-row-start: 1;
-    grid-column-start: 3;
- 
-    grid-row-end: 2;
-    grid-column-end: 6;   
+
 }
 
+#menu .nav-items li {
+    list-style:none;
+}
+#menu .nav-items li a {
+    text-decoration: none;
+    font-style: none;
+    color: white;
+    letter-spacing: 1px;
+    transition: opacity border 400ms ease-in-out;
+    font-size: 24px;
+}
+#menu .nav-items li a:hover {
+    opacity: 0.78;
+    border-bottom: 1px white solid
+}
 
 .botoes {
-    font-size: 100px;
+    font-size: 50px;
     line-height: 1.5;
     width: 15%;
     height: 100px;
@@ -56,45 +90,65 @@ body {
 }
 
 #container {
-    background-color: greenyellow;
-    opacity: calc(75%);
-    grid-row-start: 2;
-    grid-column-start: 3;
-    grid-row-end: 4;
-    grid-column-end: 6;
-    padding: 5em;   
-}
 
-#pesquisa-cep{
+}
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    
+}
+#content{
     border-radius: 1.5em;
-    align-self: center;
     padding: 2em;
     background-color: white;
-    opacity: calc(80%);
-    height: calc(70%);
+    opacity: calc(90%);
+    
 }
 
-#texto-pesquisa{
+#content-title{
     font-family:'Bebas Neue', cursive;
-    font-size: 2.5em;
+    font-size: 1.5em;
+    margin-bottom: 24px;
 }
 
-#caixa-pesquisa{
-    opacity: calc(100%);
-    text-align:center;
+input{
+    
+    text-align:left;
     border-radius: 1.5em;
-    width: 70%;
-    height: 3em;
+    width: 80%;
+    height: 2.5em;
     text-decoration:solid;
     color: white;
     background-color: #9ab8c7;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    outline: none;
+    border: 3px solid #9ab8c7;
+    transition: border-color 400ms;
+}
+input:focus{
+    border-color: #2b6785;
 }
 
-#botao-pesquisa{
+input::placeholder{
+    color: white;
+    opacity: 1;
+}
+input::-ms-input-placeholder{
+    color: white;
+    opacity: 1;
+}
+
+
+.btn{
     opacity: calc(100%);
     border-radius: 1.5em;
     padding: 0.5em;
     background-color: #9ab8c7;
+    border: none;
+    cursor: pointer;
 }
 
 #img-botao-pesquisa{
@@ -103,12 +157,16 @@ body {
 
 }
 
-#footer {
+footer {
+    background-color: var(--low-opacity-bg);
     color: white;
     text-align:center;
-    margin-top: 150px;
-    grid-row-start: 4;
-    grid-column-start: 3;
-    grid-row-end: 5;
-    grid-column-end: 6;   
+    
+    border-radius: 14px;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    
+}
+footer h3 {
+    font-weight: 400;
 }
