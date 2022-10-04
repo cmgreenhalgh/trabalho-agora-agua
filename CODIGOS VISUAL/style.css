@@ -145,10 +145,14 @@ input::-ms-input-placeholder{
 .btn{
     opacity: calc(100%);
     border-radius: 1.5em;
-    padding: 0.5em;
+    padding: 0.7em;
     background-color: #9ab8c7;
     border: none;
     cursor: pointer;
+    transition: background 400ms;
+}
+.btn:hover{
+    background-color: #2a6481;
 }
 
 #img-botao-pesquisa{
